@@ -1,7 +1,7 @@
 {
   "name": "@rhelements/rhelements",
   "scripts": {
-    "start": "spandx",
+    "start": "npm run storybook",
     "lerna": "lerna",
     "test": "wct --configFile wct.conf.json test/index.html",
     "build": "lerna run build",
@@ -55,7 +55,7 @@
     "polymer-webpack-loader": "^2.0.2",
     "prettier": "^1.13.5",
     "requirejs": "^2.3.5",
-    "spandx": "^0.2.2",
+    "spandx": "^1.0.0",
     "strip-css-comments": "^3.0.0",
     "trim": "0.0.1",
     "wct-browser-legacy": "0.0.1-pre.10",

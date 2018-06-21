@@ -1,5 +1,5 @@
 import Rhelement from "../rhelement/rhelement.js";
-import "../../numeral/numeral.js";
+import "../../numeral/min/numeral.min.js";
 
 /*
  * DO NOT EDIT. This will be autopopulated with the
