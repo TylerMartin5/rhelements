@@ -1,0 +1,49 @@
+//
+// Global vars are named:
+// `$rh-global--concept--PropertyTitleCase--modifier--state`
+// For example:
+// * $rh-global--color--primary
+// * $rh-global--FontSize
+// * --rh-global--FontSize--heading--xs
+
+// Component/Element vars are named:
+// `$rh-c-block__element--modifier--state--PropertyTitleCase`
+// For example:
+// * --rh-dropdown--heading--FontSize
+// * --cp-accordion--heading--FontSize
+
+
+// ========================================================================
+// Base Typography
+// ========================================================================
+
+$rh-global--typography--fontSize: 18px !default;
+
+// Line heights
+$rh-global--LineHeight--sm:  1.2 !default;
+$rh-global--LineHeight:      1.4 !default; // base
+$rh-global--LineHeight--lg:  1.8 !default;
+
+// Font weights
+$rh-global--FontWeight--light:      300;
+$rh-global--FontWeight--normal:     500; // base
+$rh-global--FontWeight--semi-bold:  600;
+$rh-global--FontWeight--bold:       700;
+
+// Font families
+$rh-global--FontFamily--sans-serif:    "Overpass", Overpass, Helvetica, helvetica, arial, sans-serif;
+//$rh-global--FontFamily--monospace:     "Overpass Mono", Consolas, Monaco, 'Andale Mono', monospace;
+
+
+// ========================================================================
+// Headings
+// ========================================================================
+
+// Heading sizes
+// $rh-global--FontSize--heading--xxl:     32px !default;
+// $rh-global--FontSize--heading--xl:      28px !default;
+// $rh-global--FontSize--heading--lg:      24px !default;
+// $rh-global--FontSize--heading--md:      20px !default;
+// $rh-global--FontSize--heading--sm:      18px !default;
+// $rh-global--FontSize--heading--xs:      16px !default;
+// $rh-global--FontSize--heading--xxs:     14px !default;

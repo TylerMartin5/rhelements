@@ -1,0 +1,92 @@
+//
+// Global vars are named:
+// `$rh-global--concept--PropertyTitleCase--modifier--state`
+// For example:
+// * $rh-global--color--primary
+// * $rh-global--FontSize
+// * --rh-global--FontSize--heading--xs
+
+// Component/Element vars are named:
+// `$rh-c-block__element--modifier--state--PropertyTitleCase`
+// For example:
+// * --rh-dropdown--heading--FontSize
+// * --cp-accordion--heading--FontSize
+
+
+// ========================================================================
+// Global color definitions
+// ========================================================================
+//-- GRAY: lightest to darkest
+$rh-global--color--white: #fff !default;
+$rh-global--color--gallery: #f0f0f0 !default; // mainly used as band background
+$rh-global--color--cloud: #eee !default;      // mainly used for colorful backgrounds where white has too much contrast
+$rh-global--color--mercury: #e2e2e2 !default; // gray card background (visible on $gallery)
+$rh-global--color--iron: #d2d3d5 !default;    // mainly used as disabled buttons
+$rh-global--color--misty: #ccc !default;      // WAS #dcdcdc; suggested update in styleguide for link underlines
+$rh-global--color--silver: #aaa !default;     // visible against white, black, & mercury, used for icon hover
+$rh-global--color--fog: #8a8a8a !default;     // mainly used as lighter gray on dark bg
+$rh-global--color--stone: #646464 !default;   // mainly used as copy
+$rh-global--color--charcoal: #2f3541 !default;
+$rh-global--color--black: #252527 !default;
+$rh-global--color--rich-black: #1a1a1a !default;
+
+//-- ROYGBIV
+$rh-global--color--red: #c00 !default; // Not to be used as a background color (except in site footer) or as an error color.
+$rh-global--color--brick-red: #a30000 !default;
+$rh-global--color--dark-red: #87171a !default;
+$rh-global--color--tahiti-gold: #ec7a08 !default; // Product color only
+$rh-global--color--orange: #ff6c35 !default;  // RSS icon
+$rh-global--color--apple: #479b2e !default; // product color; use sparingly; was green
+$rh-global--color--turquoise: #69a8b1 !default;
+$rh-global--color--picton-blue: #46b8e5 !default; // product color; use sparingly
+$rh-global--color--cerulean: #00b9e4 !default; // product color; use sparingly
+$rh-global--color--lochmara: #0088ce !default; // product color; use sparingly
+$rh-global--color--havelock-blue: #4a90e2 !default; // product color; use sparingly
+$rh-global--color--denim-blue: #06c !default;  // link on light background
+$rh-global--color--steel-blue: #004080 !default; // link hover state on light background
+$rh-global--color--midnight-blue: #73bcf7 !default; // link on dark background
+$rh-global--color--unc-blue: #2b9af3 !default;  // link hover on dark background; also used for promo backgrounds - avoid copious use as a background
+$rh-global--color--medium-blue: #497cb7 !default; // background color for cards and bands
+$rh-global--color--sherpa-blue: #004153 !default; // was teal; used on action band
+$rh-global--color--blue-lagoon: #007a87 !default; // product color; used for promo backgrounds - avoid copious use as a background
+$rh-global--color--eden: #10565c !default; // was accent-teal-medium
+$rh-global--color--evening-sea: #033d43 !default; // was accent-teal-dark
+
+// SESSION BREAKOUT COLORS
+// These colors are to be used in Session breakout tables.
+$rh-global--color--pink: #f5c1d1 !default;
+$rh-global--color--skyblue: #aee3f8 !default;
+$rh-global--color--purple: #d0bcf8 !default;
+$rh-global--color--mauve: #ecbaff !default;
+$rh-global--color--tangerine: #ffda7d !default;
+$rh-global--color--yellow: #fffbb3 !default;
+$rh-global--color--tan: #eec899 !default;
+$rh-global--color--brown: #bfb5a8 !default;
+$rh-global--color--bluegreen: #b1d8da !default;
+$rh-global--color--mint: #b3ffe4 !default;
+$rh-global--color--emerald: #92da90 !default;
+$rh-global--color--lime: #bee05c !default;
+$rh-global--color--lightblue: #b8d9ec !default;
+$rh-global--color--periwinkle: #b5b7da !default;
+
+// PROMO COLORS
+$rh-global--color--limeade: #6ba000 !default; // Promo-only color; do not use elsewhere
+$rh-global--color--golden-yellow: #f0ab00 !default; // Promo-only color; do not use elsewhere
+
+// ========================================================================
+// PRODUCT COLORS
+// ========================================================================
+$rh-global--color--product-lines: (
+    linux-platforms:        $rh-global--color--havelock-blue,
+    storage:                $rh-global--color--tahiti-gold,
+    it-infrastructure:      $rh-global--color--cerulean,
+    management:             $rh-global--color--picton-blue,
+    jboss-middleware:       $rh-global--color--apple,
+    mobile:                 $rh-global--color--apple,
+    virtualization:         $rh-global--color--lochmara,
+    cloud-computing:        $rh-global--color--lochmara,
+    services-and-support:   $rh-global--color--blue-lagoon,
+) !default;
+
+
+

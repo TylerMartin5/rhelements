@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <script src="/components/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script src="/components/web-component-tester/browser.js"></script>
+    <script type="module" src="../rdc-band-layout.js"></script>
+  </head>
+  <body>
+
+    <rdc-band-layout>
+      This is the element content.
+    </rdc-band-layout>
+
+    <script>
+      suite('<rdc-band-layout>', () => {
+        test('it should do something RHElementy', () => {
+          // you need to write tests!!!
+          const rdcBandLayout = document.querySelector('rdc-band-layout');
+          const textContent = rdcBandLayout.textContent.trim();
+          assert.equal(textContent, 'This is the element content.', 'rdc-band-layout should do something');
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+//
+// Vars are named:
+// `$rh-global--concept--modifier--state--PropertyTitleCase`
+// `$rh-c-block__element--modifier--state--PropertyTitleCase`
+//
+// For example:
+// $rh-global--color--primary
+// $rh-global--FontSize
+// $rh-global--heading--xs--FontSize
+// $rh-dropdown--heading--FontSize
+// $cp-accordion--heading--FontSize
+
+// ========================================================================
+// Grid Breakpoints
+// ========================================================================
+
+$rh-global--grid-breakpoint--xxs: 0 !default;
+$rh-global--grid-breakpoint--xs: 480px !default;
+$rh-global--grid-breakpoint--sm: 768px !default;
+$rh-global--grid-breakpoint--md: 992px !default;
+$rh-global--grid-breakpoint--lg: 1200px !default;
+
+$rh-global--grid-breakpoints: (
+  xxs: $rh-global--grid-breakpoint--xxs,
+  xs: $rh-global--grid-breakpoint--xs,
+  sm: $rh-global--grid-breakpoint--sm,
+  md: $rh-global--grid-breakpoint--md,
+  lg: $rh-global--grid-breakpoint--lg,
+) !default;
+
+$rh-global--grid-breakpoint--xxs--max: $rh-global--grid-breakpoint--xs - 1 !default;
+$rh-global--grid-breakpoint--xs--max: $rh-global--grid-breakpoint--sm - 1 !default;
+$rh-global--grid-breakpoint--sm--max: $rh-global--grid-breakpoint--md - 1 !default;
+$rh-global--grid-breakpoint--md--max: $rh-global--grid-breakpoint--lg - 1 !default;
+
+
+// ========================================================================
+// Spacers / Gutters
+// ========================================================================
+
+// Factors of 1em or 16px
+$rh-global--spacer--fixed-header--offset: 90px;
+
+$rh-global--spacer--band-padding: 60px;
+
+$rh-global--spacer--box-padding: 30px;
+$rh-global--spacer--box-padding--thin: 15px;
+$rh-global--spacer--box-padding--xs: 10px;
+$rh-global--spacer--box-padding--accordion: 15px 25px;
+
+$rh-global--spacer--box-padding--customer-success: 20px;
+
+$rh-global--spacer--accordion-padding: 15px;
+$rh-global--spacer--accordion--indicator-indent: 30px;
+
+$rh-global--spacer--vertical-gutter: 30px;
+$rh-global--spacer--vertical-gutter--divider: 14px; // because 1px rule line
+
+$rh-global--spacer--spacious-gutter: 35px;
+$rh-global--spacer--gallery-flex-gutter: 20px;
+
+$rh-global--spacer--mobile-edge: 9px;
+$rh-global--spacer--mobile-edge--solp: 20px;
+
+$rh-global--spacer--menu--top: 36px;
+$rh-global--spacer--menu--bottom: 32px;
+$rh-global--spacer--menu--sides: 15px;
+
+$rh-global--spacer--icon--padding: 5px; // Set space between the svg and the container. Used for rh-icons.
+$rh-global--spacer--icon--stroke: 1px;
+$rh-global--spacer--icon--diameter: 51.025%; // Resizes web-icons.
+
+$rh-global--spacer--secondary-nav--link: 14px; //(px) %secondary-nav-bar-link & navigation-link-container padding
+
+// push - pull layout:
+$rh-global--spacer--pull-hero--bottom-padding: 0;
+$rh-global--spacer--pull--margin: $min-aside-height + $aside-bottom-padding + $pull-hero-bottom-padding;
+$rh-global--spacer--push--margin: $min-aside-height + $aside-bottom-padding;
+
+$rh-global--spacer--aside--padding-bottom: ($vertical-gutter / 2);
+
+//accordion, accomodate for thick border
+$rh-global--spacer--accordion-header--indent: ($accordion-padding + $table-border-thick);
+
+// -- Sizing
+$rh-global--size--aside--min-height: 130px;
+$rh-global--size--carousel--indicator--height: 42px;
+
+// Min widths for timestamps, to keep time & a.m./p.m. on the same line
+$rh-global--size--timestamp--width--sm: 100px;
+$rh-global--size--timestamp--width--md: 180px;
