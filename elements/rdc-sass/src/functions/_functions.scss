@@ -1,0 +1,7 @@
+@function rh-strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function breakpoint($size) {
+    @return map-get($rh-global--grid-breakpoints, $size);
+}

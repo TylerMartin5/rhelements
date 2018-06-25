@@ -1,37 +1,41 @@
 //@import "../../rh-sass/rh-sass";
 @import "node_modules/@rhelements/rdc-sass/rdc-sass";
 
+:root {
+  --rdc-band-layout--backgroundColor--default: $rh-global--color--white;
+}
+
 :host {
   //-- Band padding options
   position: relative;
   padding-top: $band-padding;
   padding-bottom: $band-padding;
-  &[band-padding~="no_top"] {
+  &[padding~="no_top"] {
     padding-top: 0;
   }
-  &[band-padding~="no_bottom"] {
+  &[padding~="no_bottom"] {
     padding-bottom: 0;
   }
-  &[band-padding~="xs_top"] {
+  &[padding~="xs_top"] {
     padding-top: calc($band-padding / 4);
   }
-  &[band-padding~="xs_bottom"] {
+  &[padding~="xs_bottom"] {
     padding-bottom: calc($band-padding / 4);
   }
-  &[band-padding~="sm_top"] {
+  &[padding~="sm_top"] {
     padding-top: calc($band-padding / 2);
   }
-  &[band-padding~="sm_bottom"] {
+  &[padding~="sm_bottom"] {
     padding-bottom: calc($band-padding / 2);
   }
-  &[band-padding~="lg_top"] {
+  &[padding~="lg_top"] {
     padding-top: calc($band-padding * 2);
   }
-  &[band-padding~="lg_bottom"] {
+  &[padding~="lg_bottom"] {
     padding-bottom: calc($band-padding * 2);
   }
   //-- Background settings
-  background: color(band-background, white); // default color
+  background: var(--rdc-band-layout--backgroundColor--default); // default color
   // Support background colors
   @include background-colors;
   @include overlay;
@@ -42,32 +46,34 @@
   &[background-fixed] {
     background-attachment: fixed;
   }
-  &[background-align="right center"] {
-    background-position: right center;
+  // Mix and match alignment
+  &[background-align~="right"] {
+    background-position-x: right;
   }
-  &[background-align="left center"] {
-    background-position: left center;
+  &[background-align~="left"] {
+    background-position-x: left;
+  }
+  &[background-align~="center"] {
+    background-position-y: center;
+    background-size: contain;
+  }
+  &[background-align~="top"] {
+    background-position-y: top;
+    background-size: contain;
+  }
+  &[background-align~="bottom"] {
+    background-position-y: bottom;
+    background-size: contain;
+  }
+  // Predefined alignment settings
+  &[background-align="center center"] {
+    background-position: center center;
+    background-size: contain;
   }
   &[background-align="repeat"] {
     background-position: left top;
     background-repeat: repeat;
     background-size: inherit;
-  }
-  &[background-align="top right"] {
-    background-position: top right;
-    background-size: contain;
-  }
-  &[background-align="top left"] {
-    background-position: top left;
-    background-size: contain;
-  }
-  &[background-align="bottom right"] {
-    background-position: bottom right;
-    background-size: contain;
-  }
-  &[background-align="bottom left"] {
-    background-position: bottom left;
-    background-size: contain;
   }
   //-- Print styles
   @media print {
