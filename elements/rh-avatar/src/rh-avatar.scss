@@ -1,0 +1,193 @@
+// @import "node_modules/@rhelements/cp-sass/cp-sass";
+@import "../../rh-sass/rh-sass";
+
+:host {
+  display: block;
+}
+
+$avatar_size:   80px;
+$avatar_size_xs: 60px;
+
+$palette: (
+  purple: (
+    base:     #3B0083,
+    tint-1:   #7551A6,
+    tint-2:   #8869B3,
+    tint-3:   #9C82C0
+  ),
+  teal: (
+    base:     #007A87,
+    tint-1:   #36959E,
+    tint-2:   #68AFB6,
+    tint-3:   #9ACACF
+  ),
+  dk-blue: (
+    base:     #004153,
+    tint-1:   #1B5564,
+    tint-2:   #4E7A86,
+    tint-3:   #80A0A9
+  ),
+  orange: (
+    base:     #ec7a08,
+    tint-1:   #f0ab00,
+    tint-2:   #f5c255,
+    tint-3:   #f8d384
+  ),
+  blue: (
+    base:     #00559B,
+    tint-1:   #006FB5,
+    tint-2:   #0088CE,
+    tint-3:   #00B9E4
+  )
+);
+
+@mixin do-design($design: 1, $color: purple) {
+  $theme: map-get($palette, $color);
+  $theme_base: map-get($theme, 'base');
+  $theme_tint-1: map-get($theme, 'tint-1');
+  $theme_tint-2: map-get($theme, 'tint-2');
+  $theme_tint-3: map-get($theme, 'tint-3');
+
+  background: $theme_base;
+
+  @if $design == 1 {
+    background: -moz-linear-gradient(-45deg, $theme_tint-2 0%, $theme_tint-2 9%, $theme_tint-1 10%, $theme_tint-1 19%, $theme_base 20%, $theme_base 34%, $theme_tint-1 35%, $theme_tint-1 44%, $theme_tint-2 45%, $theme_tint-2 54%, $theme_tint-1 55%, $theme_tint-1 59%, $theme_base 60%, $theme_base 89%, $theme_tint-2 90%, $theme_tint-2 94%, $theme_tint-3 95%, $theme_tint-3 100%);
+    background: -webkit-linear-gradient(-45deg, $theme_tint-2 0%, $theme_tint-2 9%, $theme_tint-1 10%, $theme_tint-1 19%, $theme_base 20%, $theme_base 34%, $theme_tint-1 35%, $theme_tint-1 44%, $theme_tint-2 45%, $theme_tint-2 54%, $theme_tint-1 55%, $theme_tint-1 59%, $theme_base 60%, $theme_base 89%, $theme_tint-2 90%, $theme_tint-2 94%, $theme_tint-3 95%, $theme_tint-3 100%);
+    background: linear-gradient(135deg, $theme_tint-2 0%, $theme_tint-2 9%, $theme_tint-1 10%, $theme_tint-1 19%, $theme_base 20%, $theme_base 34%, $theme_tint-1 35%, $theme_tint-1 44%, $theme_tint-2 45%, $theme_tint-2 54%, $theme_tint-1 55%, $theme_tint-1 59%, $theme_base 60%, $theme_base 89%, $theme_tint-2 90%, $theme_tint-2 94%, $theme_tint-3 95%, $theme_tint-3 100%);
+
+    svg {
+      path,
+      ellipse {
+        fill: $theme_tint-1;
+      }
+    }
+  } @elseif $design == 2 {
+    background: -moz-linear-gradient(-45deg, $theme_base 0%, $theme_base 14%, $theme_tint-3 15%, $theme_tint-3 19%, $theme_tint-2 20%, $theme_tint-2 29%, $theme_tint-1 30%, $theme_tint-1 39%, $theme_base 40%, $theme_base 69%, $theme_tint-2 70%, $theme_tint-2 79%, $theme_base 80%, $theme_base 100%);
+    background: -webkit-linear-gradient(-45deg, $theme_base 0%, $theme_base 14%, $theme_tint-3 15%, $theme_tint-3 19%, $theme_tint-2 20%, $theme_tint-2 29%, $theme_tint-1 30%, $theme_tint-1 39%, $theme_base 40%, $theme_base 69%, $theme_tint-2 70%, $theme_tint-2 79%, $theme_base 80%, $theme_base 100%);
+    background: linear-gradient(135deg, $theme_base 0%, $theme_base 14%, $theme_tint-3 15%, $theme_tint-3 19%, $theme_tint-2 20%, $theme_tint-2 29%, $theme_tint-1 30%, $theme_tint-1 39%, $theme_base 40%, $theme_base 69%, $theme_tint-2 70%, $theme_tint-2 79%, $theme_base 80%, $theme_base 100%);
+
+    svg {
+      path,
+      ellipse {
+        fill: $theme_tint-2;
+      }
+    }
+  } @elseif $design == 3 {
+    background: -moz-linear-gradient(-45deg, $theme_tint-3 0%, $theme_tint-3 9%, $theme_tint-2 10%, $theme_tint-2 34%, $theme_base 35%, $theme_base 59%, $theme_tint-1 60%, $theme_tint-1 69%, $theme_tint-2 70%, $theme_tint-2 100%);
+    background: -webkit-linear-gradient(-45deg, $theme_tint-3 0%, $theme_tint-3 9%, $theme_tint-2 10%, $theme_tint-2 34%, $theme_base 35%, $theme_base 59%, $theme_tint-1 60%, $theme_tint-1 69%, $theme_tint-2 70%, $theme_tint-2 100%);
+    background: linear-gradient(135deg, $theme_tint-3 0%, $theme_tint-3 9%, $theme_tint-2 10%, $theme_tint-2 34%, $theme_base 35%, $theme_base 59%, $theme_tint-1 60%, $theme_tint-1 69%, $theme_tint-2 70%, $theme_tint-2 100%);
+
+    svg {
+      path,
+      ellipse {
+        fill: $theme_base;
+      }
+    }
+  } @elseif $design == 4 {
+    background: -moz-linear-gradient(-45deg, $theme_tint-1 0%, $theme_tint-1 9%, $theme_base 10%, $theme_base 44%, $theme_tint-2 45%, $theme_tint-2 54%, $theme_tint-1 55%, $theme_tint-1 59%, $theme_base 60%, $theme_base 79%, $theme_tint-1 80%, $theme_tint-1 100%);
+    background: -webkit-linear-gradient(-45deg, $theme_tint-1 0%, $theme_tint-1 9%, $theme_base 10%, $theme_base 44%, $theme_tint-2 45%, $theme_tint-2 54%, $theme_tint-1 55%, $theme_tint-1 59%, $theme_base 60%, $theme_base 79%, $theme_tint-1 80%, $theme_tint-1 100%);
+    background: linear-gradient(135deg, $theme_tint-1 0%, $theme_tint-1 9%, $theme_base 10%, $theme_base 44%, $theme_tint-2 45%, $theme_tint-2 54%, $theme_tint-1 55%, $theme_tint-1 59%, $theme_base 60%, $theme_base 79%, $theme_tint-1 80%, $theme_tint-1 100%);
+
+    svg {
+      path,
+      ellipse {
+        fill: $theme_tint-3;
+      }
+    }
+  } @elseif $design == 5 {
+    background: -moz-linear-gradient(-45deg, $theme_tint-2 0%, $theme_tint-2 9%, $theme_base 10%, $theme_base 39%, $theme_tint-1 40%, $theme_tint-1 49%, $theme_tint-2 50%, $theme_tint-2 54%, $theme_tint-1 55%, $theme_tint-1 59%, $theme_base 60%, $theme_base 89%, $theme_tint-1 90%, $theme_tint-1 100%);
+    background: -webkit-linear-gradient(-45deg, $theme_tint-2 0%, $theme_tint-2 9%, $theme_base 10%, $theme_base 39%, $theme_tint-1 40%, $theme_tint-1 49%, $theme_tint-2 50%, $theme_tint-2 54%, $theme_tint-1 55%, $theme_tint-1 59%, $theme_base 60%, $theme_base 89%, $theme_tint-1 90%, $theme_tint-1 100%);
+    background: linear-gradient(135deg, $theme_tint-2 0%, $theme_tint-2 9%, $theme_base 10%, $theme_base 39%, $theme_tint-1 40%, $theme_tint-1 49%, $theme_tint-2 50%, $theme_tint-2 54%, $theme_tint-1 55%, $theme_tint-1 59%, $theme_base 60%, $theme_base 89%, $theme_tint-1 90%, $theme_tint-1 100%);
+
+    svg {
+      path,
+      ellipse {
+        fill: $theme_tint-2;
+      }
+    }
+  }
+}
+
+:host > a {
+  text-decoration: none;
+}
+
+:host .user-initials {
+  position: relative;
+  display: block;
+  width: $avatar_size_xs;
+  height: $avatar_size_xs;
+  line-height: $avatar_size_xs;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  background: var(--rhe-c-avatar__user-initials--BackgroundColor, $rh-global--color--gray-battleship);
+  color: var(--rhe-c-avatar__user-initials--Color, $rh-global--color--white);
+	text-transform: uppercase;
+
+  // &::first-letter {
+  //   font-weight: 300;
+  // }
+
+	@include media-query (md) {
+		width: $avatar_size;
+    height: $avatar_size;
+    line-height: $avatar_size;
+	}
+
+  & > span {
+    z-index: 2;
+    position: relative;
+  }
+
+  svg {
+    z-index: 1;
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.design-1 {
+    @each $color, $value in $palette {
+      &.#{$color} {
+        @include do-design(1, $color);
+      }
+    }
+  }
+
+  &.design-2 {
+    @each $color, $value in $palette {
+      &.#{$color} {
+        @include do-design(2, $color);
+      }
+    }
+  }
+
+  &.design-3 {
+    @each $color, $value in $palette {
+      &.#{$color} {
+        @include do-design(3, $color);
+      }
+    }
+  }
+
+  &.design-4 {
+    @each $color, $value in $palette {
+      &.#{$color} {
+        @include do-design(4, $color);
+      }
+    }
+  }
+
+  &.design-5 {
+    @each $color, $value in $palette {
+      &.#{$color} {
+        @include do-design(5, $color);
+      }
+    }
+  }
+}
